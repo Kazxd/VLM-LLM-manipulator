@@ -1,0 +1,9 @@
+id,category,repeat,passed,detail,tool_calls,tool_failures,rejected,llm_calls,llm_s,wall_s,reply
+pick_can,objects,0,False,reset failed,0,0,0,0,0.0,0.0,
+pick_ball,objects,0,False,reset failed,0,0,0,0,0.0,0.0,
+pick_block,objects,0,False,reset failed,0,0,0,0,0.0,0.0,
+xy_can,objects,0,False,reset failed,0,0,0,0,0.0,0.0,
+xy_ball,objects,0,False,reset failed,0,0,0,0,0.0,0.0,
+can_on_red,objects,0,False,reset failed,0,0,0,0,0.0,0.0,
+ball_on_block,objects,0,False,reset failed,0,0,0,0,0.0,0.0,
+zone_can_right,objects,0,False,reset failed,0,0,0,0,0.0,0.0,

@@ -1,0 +1,318 @@
+{
+  "model": "qwen3:4b",
+  "time": "20261002_015849",
+  "results": [
+    {
+      "id": "multi_stack3",
+      "category": "multistep",
+      "command": "stack all three cubes: red on the bottom, green in the middle, blue on top",
+      "passed": true,
+      "detail": "green_cube on red_cube? dxy=0.005 dz=0.052; blue_cube on green_cube? dxy=0.006 dz=0.052",
+      "reply": "The tower has been successfully built with red at the bottom, green in the middle, and blue on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 26.73002052307129,
+      "wall_s": 64.14150094985962,
+      "trace": [
+        "  -> build_tower({'order': ['red', 'green', 'blue']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: red, green, blue', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "multi_tower_brg",
+      "category": "multistep",
+      "command": "build a tower with blue on the bottom, red in the middle and green on top",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052; green_cube on red_cube? dxy=0.002 dz=0.052",
+      "reply": "The tower has been successfully built with blue at the bottom, red in the middle, and green on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 14.385699033737183,
+      "wall_s": 52.59899663925171,
+      "trace": [
+        "  -> build_tower({'order': ['blue', 'red', 'green']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: blue, red, green', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "zone_one_left",
+      "category": "zone",
+      "command": "put the red cube in the left zone",
+      "passed": true,
+      "detail": "red_cube in left zone? xy=(0.510, 0.240) z=0.227",
+      "reply": "The red cube has been successfully placed in the left zone. Task complete.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 21.416770696640015,
+      "wall_s": 37.691813230514526,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_in_zone({'zone': 'left'})",
+        "  <- {'success': True, 'message': 'placed: in the left zone at (0.51, 0.24)'}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "zone_one_right",
+      "category": "zone",
+      "command": "move the green cube into the right zone",
+      "passed": true,
+      "detail": "green_cube in right zone? xy=(0.510, -0.320) z=0.227",
+      "reply": "The green cube has been successfully moved to the right zone at (0.51, -0.32).",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 29.643009424209595,
+      "wall_s": 47.34340977668762,
+      "trace": [
+        "  -> pick_object({'color': 'green'})",
+        "  <- {'success': True, 'message': 'picked green object'}",
+        "  -> place_in_zone({'zone': 'right'})",
+        "  <- {'success': True, 'message': 'placed: in the right zone at (0.51, -0.32)'}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "zone_sort3",
+      "category": "zone",
+      "command": "sort the cubes: red and green go in the left zone, blue goes in the right zone",
+      "passed": true,
+      "detail": "red_cube in left zone? xy=(0.590, 0.240) z=0.227; green_cube in left zone? xy=(0.510, 0.240) z=0.227; blue_cube in right zone? xy=(0.510, -0.320) z=0.227",
+      "reply": "Cubes sorted: red and green in left zone, blue in right zone.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 17.70933985710144,
+      "wall_s": 76.30743527412415,
+      "trace": [
+        "  -> sort_cubes({'assignments': {'blue': 'right', 'green': 'left', 'red': 'left'}})",
+        "  <- {'success': True, 'message': 'sorted: blue->right, green->left, red->left', 'sorted': 3}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "multi_stack3",
+      "category": "multistep",
+      "command": "stack all three cubes: red on the bottom, green in the middle, blue on top",
+      "passed": true,
+      "detail": "green_cube on red_cube? dxy=0.005 dz=0.052; blue_cube on green_cube? dxy=0.007 dz=0.052",
+      "reply": "The tower has been successfully built with red at the bottom, green in the middle, and blue on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 22.512345790863037,
+      "wall_s": 59.74050951004028,
+      "trace": [
+        "  -> build_tower({'order': ['red', 'green', 'blue']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: red, green, blue', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "multi_tower_brg",
+      "category": "multistep",
+      "command": "build a tower with blue on the bottom, red in the middle and green on top",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052; green_cube on red_cube? dxy=0.002 dz=0.052",
+      "reply": "The tower has been successfully built with blue at the bottom, red in the middle, and green on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 14.397065162658691,
+      "wall_s": 52.85327506065369,
+      "trace": [
+        "  -> build_tower({'order': ['blue', 'red', 'green']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: blue, red, green', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "zone_one_left",
+      "category": "zone",
+      "command": "put the red cube in the left zone",
+      "passed": true,
+      "detail": "red_cube in left zone? xy=(0.510, 0.240) z=0.227",
+      "reply": "The red cube has been successfully placed in the left zone. Task complete.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 21.390439748764038,
+      "wall_s": 37.73564553260803,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_in_zone({'zone': 'left'})",
+        "  <- {'success': True, 'message': 'placed: in the left zone at (0.51, 0.24)'}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "zone_one_right",
+      "category": "zone",
+      "command": "move the green cube into the right zone",
+      "passed": true,
+      "detail": "green_cube in right zone? xy=(0.510, -0.320) z=0.227",
+      "reply": "The green cube has been successfully moved to the right zone at (0.51, -0.32).",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 29.534799814224243,
+      "wall_s": 47.15749430656433,
+      "trace": [
+        "  -> pick_object({'color': 'green'})",
+        "  <- {'success': True, 'message': 'picked green object'}",
+        "  -> place_in_zone({'zone': 'right'})",
+        "  <- {'success': True, 'message': 'placed: in the right zone at (0.51, -0.32)'}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "zone_sort3",
+      "category": "zone",
+      "command": "sort the cubes: red and green go in the left zone, blue goes in the right zone",
+      "passed": true,
+      "detail": "red_cube in left zone? xy=(0.590, 0.240) z=0.227; green_cube in left zone? xy=(0.510, 0.240) z=0.227; blue_cube in right zone? xy=(0.510, -0.320) z=0.227",
+      "reply": "Cubes sorted: red and green in left zone, blue in right zone.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 17.734498262405396,
+      "wall_s": 76.49137043952942,
+      "trace": [
+        "  -> sort_cubes({'assignments': {'blue': 'right', 'green': 'left', 'red': 'left'}})",
+        "  <- {'success': True, 'message': 'sorted: blue->right, green->left, red->left', 'sorted': 3}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "multi_stack3",
+      "category": "multistep",
+      "command": "stack all three cubes: red on the bottom, green in the middle, blue on top",
+      "passed": true,
+      "detail": "green_cube on red_cube? dxy=0.005 dz=0.052; blue_cube on green_cube? dxy=0.006 dz=0.052",
+      "reply": "The tower has been successfully built with red at the bottom, green in the middle, and blue on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 22.474080085754395,
+      "wall_s": 59.727086305618286,
+      "trace": [
+        "  -> build_tower({'order': ['red', 'green', 'blue']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: red, green, blue', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 2
+    },
+    {
+      "id": "multi_tower_brg",
+      "category": "multistep",
+      "command": "build a tower with blue on the bottom, red in the middle and green on top",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052; green_cube on red_cube? dxy=0.002 dz=0.052",
+      "reply": "The tower has been successfully built with blue at the bottom, red in the middle, and green on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 14.383900165557861,
+      "wall_s": 52.58267569541931,
+      "trace": [
+        "  -> build_tower({'order': ['blue', 'red', 'green']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: blue, red, green', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 2
+    },
+    {
+      "id": "zone_one_left",
+      "category": "zone",
+      "command": "put the red cube in the left zone",
+      "passed": true,
+      "detail": "red_cube in left zone? xy=(0.510, 0.240) z=0.227",
+      "reply": "The red cube has been successfully placed in the left zone. Task complete.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 21.344618320465088,
+      "wall_s": 37.59462785720825,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_in_zone({'zone': 'left'})",
+        "  <- {'success': True, 'message': 'placed: in the left zone at (0.51, 0.24)'}"
+      ],
+      "error": "",
+      "repeat": 2
+    },
+    {
+      "id": "zone_one_right",
+      "category": "zone",
+      "command": "move the green cube into the right zone",
+      "passed": true,
+      "detail": "green_cube in right zone? xy=(0.510, -0.320) z=0.227",
+      "reply": "The green cube has been successfully moved to the right zone at (0.51, -0.32).",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 29.518687963485718,
+      "wall_s": 47.21390986442566,
+      "trace": [
+        "  -> pick_object({'color': 'green'})",
+        "  <- {'success': True, 'message': 'picked green object'}",
+        "  -> place_in_zone({'zone': 'right'})",
+        "  <- {'success': True, 'message': 'placed: in the right zone at (0.51, -0.32)'}"
+      ],
+      "error": "",
+      "repeat": 2
+    },
+    {
+      "id": "zone_sort3",
+      "category": "zone",
+      "command": "sort the cubes: red and green go in the left zone, blue goes in the right zone",
+      "passed": true,
+      "detail": "red_cube in left zone? xy=(0.590, 0.240) z=0.227; green_cube in left zone? xy=(0.510, 0.240) z=0.227; blue_cube in right zone? xy=(0.510, -0.320) z=0.227",
+      "reply": "Cubes sorted: red and green in left zone, blue in right zone.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 17.740460872650146,
+      "wall_s": 76.24521565437317,
+      "trace": [
+        "  -> sort_cubes({'assignments': {'blue': 'right', 'green': 'left', 'red': 'left'}})",
+        "  <- {'success': True, 'message': 'sorted: blue->right, green->left, red->left', 'sorted': 3}"
+      ],
+      "error": "",
+      "repeat": 2
+    }
+  ]
+}

@@ -1,0 +1,15 @@
+id,category,repeat,passed,detail,tool_calls,tool_failures,rejected,llm_calls,llm_s,wall_s,reply
+pick_can,objects,0,True,yellow_can z=0.345 (need >0.30),1,0,0,2,5.921972751617432,35.76528358459473,"[Current scene] objects: detect service not available. Holding: can. Also on the table (not listed above): ball, block.
+
+[Request] place the can on the red cube /no_think"
+pick_ball,objects,0,True,purple_ball z=0.345 (need >0.30),1,0,0,2,0.3980705738067627,22.141064643859863,Holding the ball. Next step?
+pick_block,objects,0,True,white_block z=0.343 (need >0.30),1,0,0,2,0.35689401626586914,23.990522146224976,Holding the white block.
+xy_can,objects,0,True,"yellow_can 0.006 m from target, z=0.225",2,0,0,3,1.3711020946502686,48.196486711502075,The can is now at x 0.5 and y 0.0.
+can_on_red,objects,0,False,yellow_can on red_cube? dxy=0.036 dz=0.121,2,1,0,3,1.1111528873443604,39.51224446296692,The red cube is not detected. Could you confirm the presence or location of the red cube?
+pick_can,objects,1,True,yellow_can z=0.345 (need >0.30),1,0,0,2,0.9914224147796631,24.656248807907104,"[Current scene] objects: detect service not available. Holding: can. Also on the table (not listed above): ball, block.
+
+[Request] place the can on the red cube /no_think"
+pick_ball,objects,1,True,purple_ball z=0.345 (need >0.30),1,0,0,2,0.3847367763519287,22.201099395751953,Holding the ball. Next step?
+pick_block,objects,1,True,white_block z=0.343 (need >0.30),1,0,0,2,0.357097864151001,23.925172805786133,Holding the white block.
+xy_can,objects,1,True,"yellow_can 0.006 m from target, z=0.225",2,0,0,3,1.3871264457702637,48.074870347976685,The can is now at x 0.5 and y 0.0.
+can_on_red,objects,1,False,yellow_can on red_cube? dxy=0.036 dz=0.121,2,1,0,3,1.105355978012085,39.25838756561279,The red cube is not detected. Could you confirm the presence or location of the red cube?

@@ -1,0 +1,2 @@
+grasp_dz,squeeze,trials,held,rate,failures
+-0.0075,0.08,3,0,0.0,picked can object | skill said ok but cube z=None || picked ball object | skill said ok but cube z=None || picked block object | skill said ok but cube z=None

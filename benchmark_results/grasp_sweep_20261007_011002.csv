@@ -1,0 +1,16 @@
+grasp_dz,squeeze,trials,held,rate,failures
+-0.0075,0.05,3,3,1.0,
+-0.0075,0.08,3,3,1.0,
+-0.0075,0.12,3,3,1.0,
+0.0,0.05,3,3,1.0,
+0.0075,0.08,3,3,1.0,
+0.0075,0.12,3,3,1.0,
+0.0,0.08,3,2,0.6666666666666666,lost the object during the lift (at +1 cm) (fingers closed further (q=
+0.0,0.12,3,2,0.6666666666666666,lost the object during the lift (at +1 cm) (fingers closed further (q=
+-0.015,0.05,3,1,0.3333333333333333,lost the object during the lift (at +3 cm) (fingers closed further (q= || lost the object during the lift (at +12 cm) (fingers closed further (q
+0.0075,0.05,3,1,0.3333333333333333,picked red object | skill said ok but cube z=0.22499989724924035 || lost the object during the lift (at +3 cm) (fingers closed further (q=
+0.015,0.08,3,1,0.3333333333333333,lost the object during the lift (at +1 cm) (fingers closed further (q= || lost the object during the lift (at +12 cm) (fingers closed further (q
+0.015,0.12,3,1,0.3333333333333333,lost the object during the lift (at +3 cm) (fingers closed further (q= || lost the object during the lift (at +3 cm) (fingers closed further (q=
+-0.015,0.08,3,0,0.0,lost the object during the lift (at +1 cm) (fingers closed further (q= || lost the object during the lift (at +12 cm) (fingers closed further (q || lost the object during the lift (at +1 cm) (fingers closed further (q=
+-0.015,0.12,3,0,0.0,lost the object during the lift (at +1 cm) (fingers closed further (q= || lost the object during the lift (at +12 cm) (fingers closed further (q || lost the object during the lift (at +3 cm) (fingers closed further (q=
+0.015,0.05,3,0,0.0,lost the object during the lift (at +12 cm) (fingers closed further (q || lost the object during the lift (at +3 cm) (fingers closed further (q= || lost the object during the lift (at +3 cm) (fingers closed further (q=

@@ -1,0 +1,258 @@
+{
+  "model": "qwen3:4b",
+  "time": "20261002_013505",
+  "results": [
+    {
+      "id": "stack_red_blue",
+      "category": "stack",
+      "command": "put the red cube on the blue one",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052",
+      "reply": "The red cube has been successfully placed on top of the blue cube.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 52.50005125999451,
+      "wall_s": 69.64440655708313,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_object({'target': 'blue'})",
+        "  <- {'success': True, 'message': 'placed'}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "multi_stack3",
+      "category": "multistep",
+      "command": "stack all three cubes: red on the bottom, green in the middle, blue on top",
+      "passed": true,
+      "detail": "green_cube on red_cube? dxy=0.005 dz=0.052; blue_cube on green_cube? dxy=0.007 dz=0.052",
+      "reply": "The tower has been successfully stacked with red at the bottom, green in the middle, and blue on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 13.953420877456665,
+      "wall_s": 51.18706035614014,
+      "trace": [
+        "  -> build_tower({'order': ['red', 'green', 'blue']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: red, green, blue', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "multi_tower_brg",
+      "category": "multistep",
+      "command": "build a tower with blue on the bottom, red in the middle and green on top",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052; green_cube on red_cube? dxy=0.002 dz=0.052",
+      "reply": "The tower has been successfully built with blue at the bottom, red in the middle, and green on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 13.2759850025177,
+      "wall_s": 51.4384024143219,
+      "trace": [
+        "  -> build_tower({'order': ['blue', 'red', 'green']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: blue, red, green', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "rel_left",
+      "category": "relational",
+      "command": "put the red cube to the left of the blue cube",
+      "passed": true,
+      "detail": "red_cube left of blue_cube? along=0.102 (want 0.06-0.16) across=0.002 (want <0.04) z=0.227",
+      "reply": "The red cube is now placed to the left of the blue cube.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 81.10091495513916,
+      "wall_s": 98.13415908813477,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_relative({'reference': 'blue', 'relation': 'left', 'distance': 0.1})",
+        "  <- {'success': True, 'message': 'placed: left of the blue cube, at (0.60, -0.05)'}"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "stack_red_blue",
+      "category": "stack",
+      "command": "put the red cube on the blue one",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052",
+      "reply": "The red cube has been placed on the blue cube.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 47.555094718933105,
+      "wall_s": 64.6525559425354,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_object({'target': 'blue'})",
+        "  <- {'success': True, 'message': 'placed'}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "multi_stack3",
+      "category": "multistep",
+      "command": "stack all three cubes: red on the bottom, green in the middle, blue on top",
+      "passed": true,
+      "detail": "green_cube on red_cube? dxy=0.005 dz=0.052; blue_cube on green_cube? dxy=0.006 dz=0.052",
+      "reply": "The tower has been successfully stacked with red at the bottom, green in the middle, and blue on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 13.863297939300537,
+      "wall_s": 51.18908500671387,
+      "trace": [
+        "  -> build_tower({'order': ['red', 'green', 'blue']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: red, green, blue', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "multi_tower_brg",
+      "category": "multistep",
+      "command": "build a tower with blue on the bottom, red in the middle and green on top",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052; green_cube on red_cube? dxy=0.002 dz=0.052",
+      "reply": "The tower has been successfully built with blue at the bottom, red in the middle, and green on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 13.268672704696655,
+      "wall_s": 51.37919998168945,
+      "trace": [
+        "  -> build_tower({'order': ['blue', 'red', 'green']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: blue, red, green', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "rel_left",
+      "category": "relational",
+      "command": "put the red cube to the left of the blue cube",
+      "passed": true,
+      "detail": "red_cube left of blue_cube? along=0.102 (want 0.06-0.16) across=0.002 (want <0.04) z=0.227",
+      "reply": "The red cube is now placed to the left of the blue cube.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 80.58357095718384,
+      "wall_s": 97.62982034683228,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_relative({'reference': 'blue', 'relation': 'left', 'distance': 0.1})",
+        "  <- {'success': True, 'message': 'placed: left of the blue cube, at (0.60, -0.05)'}"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "stack_red_blue",
+      "category": "stack",
+      "command": "put the red cube on the blue one",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052",
+      "reply": "The red cube has been placed on the blue cube.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 47.351107120513916,
+      "wall_s": 64.45875072479248,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_object({'target': 'blue'})",
+        "  <- {'success': True, 'message': 'placed'}"
+      ],
+      "error": "",
+      "repeat": 2
+    },
+    {
+      "id": "multi_stack3",
+      "category": "multistep",
+      "command": "stack all three cubes: red on the bottom, green in the middle, blue on top",
+      "passed": true,
+      "detail": "green_cube on red_cube? dxy=0.005 dz=0.052; blue_cube on green_cube? dxy=0.006 dz=0.052",
+      "reply": "The tower has been successfully stacked with red at the bottom, green in the middle, and blue on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 13.87718152999878,
+      "wall_s": 51.159581661224365,
+      "trace": [
+        "  -> build_tower({'order': ['red', 'green', 'blue']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: red, green, blue', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 2
+    },
+    {
+      "id": "multi_tower_brg",
+      "category": "multistep",
+      "command": "build a tower with blue on the bottom, red in the middle and green on top",
+      "passed": true,
+      "detail": "red_cube on blue_cube? dxy=0.003 dz=0.052; green_cube on red_cube? dxy=0.002 dz=0.052",
+      "reply": "The tower has been successfully built with blue at the bottom, red in the middle, and green on top.",
+      "tool_calls": 1,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 2,
+      "llm_s": 13.261967420578003,
+      "wall_s": 51.47288775444031,
+      "trace": [
+        "  -> build_tower({'order': ['blue', 'red', 'green']})",
+        "  <- {'success': True, 'message': 'tower built, bottom to top: blue, red, green', 'stacked': 3}"
+      ],
+      "error": "",
+      "repeat": 2
+    },
+    {
+      "id": "rel_left",
+      "category": "relational",
+      "command": "put the red cube to the left of the blue cube",
+      "passed": true,
+      "detail": "red_cube left of blue_cube? along=0.102 (want 0.06-0.16) across=0.002 (want <0.04) z=0.227",
+      "reply": "The red cube is now placed to the left of the blue cube.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 80.75612258911133,
+      "wall_s": 97.77988004684448,
+      "trace": [
+        "  -> pick_object({'color': 'red'})",
+        "  <- {'success': True, 'message': 'picked red object'}",
+        "  -> place_relative({'reference': 'blue', 'relation': 'left', 'distance': 0.1})",
+        "  <- {'success': True, 'message': 'placed: left of the blue cube, at (0.60, -0.05)'}"
+      ],
+      "error": "",
+      "repeat": 2
+    }
+  ]
+}

@@ -1,0 +1,8 @@
+# Pick an object by name: a cube colour ("red", "green", "blue") or, when `detect_open` is running,
+# an open-vocabulary object ("can", "ball", "block"; see OBJECTS in ur_skills/skill_server.py).
+string color
+---
+bool success
+string message
+---
+string stage

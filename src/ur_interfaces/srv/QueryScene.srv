@@ -1,0 +1,11 @@
+# Ask the VLM a spatial question about the overhead image. Detections stay verified:
+# the VLM only sees object NAMES drawn at detected positions and can only answer with those names.
+string question
+---
+bool success
+string message
+string answer           # short free-text answer from the VLM
+string[] objects        # object names (red, green, blue, can, ball, block) the answer refers to; always detected ones
+bool ambiguous          # the question cannot be resolved to a single answer
+string clarification    # question to put to the user when ambiguous
+string image_path       # annotated image that was sent to the VLM

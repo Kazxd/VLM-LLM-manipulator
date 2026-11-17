@@ -1,0 +1,14 @@
+# colcon
+build/
+install/
+log/
+# third-party, cloned by setup.sh
+src/pymoveit2/
+src/robotiq_description/
+# python / editors
+__pycache__/
+*.pyc
+*.egg-info/
+.vscode/
+.idea/
+# benchmark_results/ is deliberately tracked so runs can be compared over time

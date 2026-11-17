@@ -1,0 +1,226 @@
+{
+  "model": "qwen3:4b-instruct",
+  "time": "20261007_181620",
+  "results": [
+    {
+      "id": "pick_can",
+      "category": "objects",
+      "command": "pick up the can",
+      "passed": false,
+      "detail": "yellow_can z=0.225 (need >0.30)",
+      "reply": "pick up the can",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 1,
+      "llm_calls": 2,
+      "llm_s": 0.790062427520752,
+      "wall_s": 3.8444595336914062,
+      "trace": [
+        "  .. llm: prompt 1536 tok in 0.4s, output 5 tok in 0.1s, load 0.0s",
+        "  .. salvaged tool call from text",
+        "  !! rejected pick_object: color must be one of ['red', 'green', 'blue', 'can', 'ball', 'block']",
+        "  .. llm: prompt 1597 tok in 0.0s, output 5 tok in 0.1s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "pick_ball",
+      "category": "objects",
+      "command": "pick up the ball",
+      "passed": false,
+      "detail": "purple_ball z=0.225 (need >0.30)",
+      "reply": "pick up the ball",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 1,
+      "llm_calls": 2,
+      "llm_s": 0.27155303955078125,
+      "wall_s": 3.323748826980591,
+      "trace": [
+        "  .. llm: prompt 1536 tok in 0.0s, output 5 tok in 0.1s, load 0.0s",
+        "  .. salvaged tool call from text",
+        "  !! rejected pick_object: color must be one of ['red', 'green', 'blue', 'can', 'ball', 'block']",
+        "  .. llm: prompt 1597 tok in 0.0s, output 5 tok in 0.1s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "pick_block",
+      "category": "objects",
+      "command": "pick up the white block",
+      "passed": false,
+      "detail": "white_block z=0.225 (need >0.30)",
+      "reply": "Which cube or object would you like me to pick up?",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 1,
+      "llm_calls": 2,
+      "llm_s": 0.40717220306396484,
+      "wall_s": 3.462567090988159,
+      "trace": [
+        "  .. llm: prompt 1537 tok in 0.0s, output 5 tok in 0.1s, load 0.0s",
+        "  .. salvaged tool call from text",
+        "  !! rejected pick_object: color must be one of ['red', 'green', 'blue', 'can', 'ball', 'block']",
+        "  .. llm: prompt 1598 tok in 0.0s, output 13 tok in 0.2s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "xy_can",
+      "category": "objects",
+      "command": "move the can to x 0.5 and y 0.0",
+      "passed": true,
+      "detail": "yellow_can 0.006 m from target, z=0.225",
+      "reply": "The can is now at x 0.5 and y 0.0.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 2.6798598766326904,
+      "wall_s": 55.434828758239746,
+      "trace": [
+        "  .. llm: prompt 1547 tok in 0.0s, output 90 tok in 1.6s, load 0.0s",
+        "  -> pick_object({'color': 'can'})",
+        "  <- {'success': True, 'message': 'picked can object'}",
+        "  .. llm: prompt 1662 tok in 0.0s, output 34 tok in 0.6s, load 0.0s",
+        "  -> place_object({'target': '', 'x': 0.5, 'y': 0.0})",
+        "  <- {'success': True, 'message': 'placed'}",
+        "  .. llm: prompt 1717 tok in 0.0s, output 18 tok in 0.3s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "can_on_red",
+      "category": "objects",
+      "command": "put the can on top of the red cube",
+      "passed": false,
+      "detail": "yellow_can on red_cube? dxy=0.457 dz=-0.000",
+      "reply": "Which cube?",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 1,
+      "llm_s": 0.11345338821411133,
+      "wall_s": 3.172555685043335,
+      "trace": [
+        "  .. llm: prompt 1541 tok in 0.0s, output 4 tok in 0.1s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 0
+    },
+    {
+      "id": "pick_can",
+      "category": "objects",
+      "command": "pick up the can",
+      "passed": false,
+      "detail": "yellow_can z=0.225 (need >0.30)",
+      "reply": "pick up the can",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 1,
+      "llm_calls": 2,
+      "llm_s": 0.28092455863952637,
+      "wall_s": 3.3377771377563477,
+      "trace": [
+        "  .. llm: prompt 1536 tok in 0.0s, output 5 tok in 0.1s, load 0.0s",
+        "  .. salvaged tool call from text",
+        "  !! rejected pick_object: color must be one of ['red', 'green', 'blue', 'can', 'ball', 'block']",
+        "  .. llm: prompt 1597 tok in 0.0s, output 5 tok in 0.1s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "pick_ball",
+      "category": "objects",
+      "command": "pick up the ball",
+      "passed": false,
+      "detail": "purple_ball z=0.225 (need >0.30)",
+      "reply": "pick up the ball",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 1,
+      "llm_calls": 2,
+      "llm_s": 0.27040839195251465,
+      "wall_s": 3.322707414627075,
+      "trace": [
+        "  .. llm: prompt 1536 tok in 0.0s, output 5 tok in 0.1s, load 0.0s",
+        "  .. salvaged tool call from text",
+        "  !! rejected pick_object: color must be one of ['red', 'green', 'blue', 'can', 'ball', 'block']",
+        "  .. llm: prompt 1597 tok in 0.0s, output 5 tok in 0.1s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "pick_block",
+      "category": "objects",
+      "command": "pick up the white block",
+      "passed": false,
+      "detail": "white_block z=0.225 (need >0.30)",
+      "reply": "\"Which color should I pick up?\"",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 1,
+      "llm_calls": 2,
+      "llm_s": 0.3388333320617676,
+      "wall_s": 3.390909194946289,
+      "trace": [
+        "  .. llm: prompt 1537 tok in 0.0s, output 5 tok in 0.1s, load 0.0s",
+        "  .. salvaged tool call from text",
+        "  !! rejected pick_object: color must be one of ['red', 'green', 'blue', 'can', 'ball', 'block']",
+        "  .. llm: prompt 1598 tok in 0.0s, output 9 tok in 0.1s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "xy_can",
+      "category": "objects",
+      "command": "move the can to x 0.5 and y 0.0",
+      "passed": true,
+      "detail": "yellow_can 0.006 m from target, z=0.225",
+      "reply": "The can is now at x 0.5 and y 0.0.",
+      "tool_calls": 2,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 3,
+      "llm_s": 2.6812174320220947,
+      "wall_s": 49.473570108413696,
+      "trace": [
+        "  .. llm: prompt 1547 tok in 0.0s, output 90 tok in 1.6s, load 0.0s",
+        "  -> pick_object({'color': 'can'})",
+        "  <- {'success': True, 'message': 'picked can object'}",
+        "  .. llm: prompt 1662 tok in 0.0s, output 34 tok in 0.6s, load 0.0s",
+        "  -> place_object({'target': '', 'x': 0.5, 'y': 0.0})",
+        "  <- {'success': True, 'message': 'placed'}",
+        "  .. llm: prompt 1717 tok in 0.0s, output 18 tok in 0.3s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 1
+    },
+    {
+      "id": "can_on_red",
+      "category": "objects",
+      "command": "put the can on top of the red cube",
+      "passed": false,
+      "detail": "yellow_can on red_cube? dxy=0.457 dz=0.000",
+      "reply": "Which cube?",
+      "tool_calls": 0,
+      "tool_failures": 0,
+      "rejected": 0,
+      "llm_calls": 1,
+      "llm_s": 0.11658668518066406,
+      "wall_s": 3.169015645980835,
+      "trace": [
+        "  .. llm: prompt 1541 tok in 0.0s, output 4 tok in 0.1s, load 0.0s"
+      ],
+      "error": "",
+      "repeat": 1
+    }
+  ]
+}

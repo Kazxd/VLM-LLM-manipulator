@@ -1,0 +1,11 @@
+id,category,repeat,passed,detail,tool_calls,tool_failures,rejected,llm_calls,llm_s,wall_s,reply
+pick_can,objects,0,False,yellow_can z=0.225 (need >0.30),0,0,1,2,0.790062427520752,3.8444595336914062,pick up the can
+pick_ball,objects,0,False,purple_ball z=0.225 (need >0.30),0,0,1,2,0.27155303955078125,3.323748826980591,pick up the ball
+pick_block,objects,0,False,white_block z=0.225 (need >0.30),0,0,1,2,0.40717220306396484,3.462567090988159,Which cube or object would you like me to pick up?
+xy_can,objects,0,True,"yellow_can 0.006 m from target, z=0.225",2,0,0,3,2.6798598766326904,55.434828758239746,The can is now at x 0.5 and y 0.0.
+can_on_red,objects,0,False,yellow_can on red_cube? dxy=0.457 dz=-0.000,0,0,0,1,0.11345338821411133,3.172555685043335,Which cube?
+pick_can,objects,1,False,yellow_can z=0.225 (need >0.30),0,0,1,2,0.28092455863952637,3.3377771377563477,pick up the can
+pick_ball,objects,1,False,purple_ball z=0.225 (need >0.30),0,0,1,2,0.27040839195251465,3.322707414627075,pick up the ball
+pick_block,objects,1,False,white_block z=0.225 (need >0.30),0,0,1,2,0.3388333320617676,3.390909194946289,"""Which color should I pick up?"""
+xy_can,objects,1,True,"yellow_can 0.006 m from target, z=0.225",2,0,0,3,2.6812174320220947,49.473570108413696,The can is now at x 0.5 and y 0.0.
+can_on_red,objects,1,False,yellow_can on red_cube? dxy=0.457 dz=0.000,0,0,0,1,0.11658668518066406,3.169015645980835,Which cube?

@@ -1,0 +1,38 @@
+id,category,repeat,passed,detail,tool_calls,tool_failures,rejected,llm_calls,llm_s,wall_s,reply
+pick_red,pick,0,True,red_cube z=0.343 (need >0.30),1,0,0,2,1.6402103900909424,12.53377914428711,"[Current scene] objects: red_0 at (0.511, 0.099), green_0 at (0.701, 0.119), blue_0 at (0.602, -0.148). Holding: red cube."
+pick_green,pick,0,True,green_cube z=0.343 (need >0.30),1,0,0,2,1.574038028717041,12.387312889099121,"[Current scene] objects: red_0 at (0.511, 0.099), green_0 at (0.701, 0.119), blue_0 at (0.602, -0.148). Holding: green."
+pick_blue,pick,0,True,blue_cube z=0.343 (need >0.30),1,0,0,2,1.5869989395141602,13.06314492225647,"[Current scene] objects: red_0 at (0.511, 0.099), green_0 at (0.701, 0.119), blue_0 at (0.602, -0.148). Holding: blue."
+stack_red_blue,stack,0,True,red_cube on blue_cube? dxy=0.004 dz=0.050,2,0,0,3,1.0379695892333984,25.00900959968567,The red cube is now on the blue cube.
+stack_green_red,stack,0,True,green_cube on red_cube? dxy=0.011 dz=0.050,2,0,0,3,1.0340731143951416,24.09801197052002,The green cube is now on the red cube.
+stack_blue_green,stack,0,False,blue_cube on green_cube? dxy=0.211 dz=0.116,2,1,0,3,1.4921886920928955,18.00813603401184,The position behind the green cube is out of reach. I will try placing the blue cube on top of the green cube directly.
+stack_red_green,stack,0,False,red_cube on green_cube? dxy=0.207 dz=0.116,2,1,0,3,1.3354990482330322,16.643542051315308,Place red on top of green is impossible due to reach constraints. I cannot complete the request.
+xy_red,place_xy,0,True,"red_cube 0.001 m from target, z=0.225",2,0,0,3,1.3867566585540771,25.67645287513733,"The red cube is now at (0.5, -0.25)."
+xy_green,place_xy,0,True,"green_cube 0.002 m from target, z=0.225",2,0,0,3,1.4765877723693848,24.190287113189697,"The green cube is placed on the table at x 0.45, y 0.25."
+xy_blue,place_xy,0,True,"blue_cube 0.002 m from target, z=0.225",2,0,0,3,1.3884050846099854,26.473900318145752,"Done. The blue cube is now at (0.4, 0.0)."
+multi_stack3,multistep,0,True,green_cube on red_cube? dxy=0.011 dz=0.050; blue_cube on green_cube? dxy=0.011 dz=0.050,1,0,0,2,1.0046300888061523,52.08888125419617,"All three cubes are stacked with red on the bottom, green in the middle, and blue on top."
+multi_tower_brg,multistep,0,True,red_cube on blue_cube? dxy=0.004 dz=0.050; green_cube on red_cube? dxy=0.003 dz=0.050,1,0,0,2,0.9553077220916748,54.92529797554016,"Tower built with blue on the bottom, red in the middle, and green on top."
+zone_one_left,zone,0,True,"red_cube in left zone? xy=(0.510, 0.241) z=0.225",2,0,0,3,1.0816619396209717,24.733767986297607,The red cube is now in the left zone.
+zone_one_right,zone,0,True,"green_cube in right zone? xy=(0.510, -0.318) z=0.225",3,1,0,4,1.505265474319458,26.184190034866333,The green cube is now in the right zone.
+zone_sort3,zone,0,True,"red_cube in left zone? xy=(0.591, 0.241) z=0.225; green_cube in left zone? xy=(0.508, 0.242) z=0.225; blue_cube in right zone? xy=(0.510, -0.322) z=0.225",1,0,0,2,1.1690614223480225,80.44500255584717,"Cubes sorted as requested: red and green in the left zone, blue in the right zone."
+multi_there_back,multistep,0,True,"red_cube 0.002 m from target, z=0.225",4,0,0,5,1.9222500324249268,54.54938769340515,Done.
+multi_xy_then_on,multistep,0,True,"blue_cube 0.002 m from target, z=0.225; red_cube on blue_cube? dxy=0.005 dz=0.050",4,0,0,5,2.3453476428985596,52.300405740737915,"Done. The blue cube is at (0.6, 0.3) and the red cube is on top of it."
+multi_two_moves,multistep,0,True,"green_cube 0.002 m from target, z=0.225; blue_cube 0.002 m from target, z=0.225",4,0,0,5,2.4280123710632324,54.07742166519165,Both the green and blue cubes have been moved to the specified positions.
+rel_next_to,relational,0,False,"green_cube-blue_cube distance 0.288 (want 0.05-0.15), z=0.225",0,0,0,1,0.45723986625671387,0.5580718517303467,"[Request] is ""next to"" meant to be relative to the blue cube or to the green cube?"
+rel_left,relational,0,True,red_cube left of blue_cube? along=0.103 (want 0.06-0.16) across=0.003 (want <0.04) z=0.225,3,0,0,4,1.8090901374816895,26.491522789001465,The red cube is now to the left of the blue cube.
+rel_right,relational,0,True,blue_cube right of green_cube? along=0.103 (want 0.06-0.16) across=0.002 (want <0.04) z=0.225,3,0,0,4,1.834554672241211,42.31212830543518,The blue cube is now on the right side of the green cube.
+rel_front,relational,0,True,red_cube front of green_cube? along=0.098 (want 0.06-0.16) across=0.000 (want <0.04) z=0.225,2,0,0,3,1.200181007385254,24.721891403198242,The red cube is now in front of the green cube.
+info_objects,info,0,True,nothing moved; reply ok,0,0,0,1,0.35698771476745605,0.4578671455383301,"The objects on the table are the red cube, green cube, and blue cube."
+info_home,info,0,True,nothing moved,1,0,0,2,0.4984464645385742,0.7499904632568359,Moved to home position successfully.
+refuse_orange,refusal,0,True,nothing moved,0,0,0,1,0.31465768814086914,0.41551804542541504,There is no orange cube in the scene. Please clarify your request.
+refuse_ambiguous,refusal,0,False,moved: ['red_cube'],4,2,0,5,2.732398748397827,13.819209814071655,"I need to place the red cube to the left of another cube, not relative to itself. Let me try placing it to the left of the green cube."
+refuse_range,refusal,0,True,nothing moved,0,0,0,1,0.9484069347381592,1.0490467548370361,"[Request] is ambiguous: x 3 and y 3 are outside the workspace (0.3 to 0.9, y -0.4 to 0.4). Please clarify the location or confirm if this is a valid request."
+pick_can,objects,0,False,yellow_can z=0.225 (need >0.30),1,1,0,2,0.8910946846008301,2.352311372756958,I cannot find the can. Could you confirm if the can is present or if there's a mistake in the request?
+pick_ball,objects,0,False,purple_ball z=0.225 (need >0.30),0,0,1,2,0.5476467609405518,0.6484489440917969,I need to clarify: do you mean pick up the ball or pick up a specific cube?
+pick_block,objects,0,False,white_block z=0.225 (need >0.30),0,0,1,2,0.7459259033203125,3.8010153770446777,"The color ""white"" is not valid; the block is referred to as ""block"" in the system. Should I pick up the block instead?"
+xy_can,objects,0,False,"yellow_can 0.372 m from target, z=0.225",0,0,0,1,0.09589862823486328,3.1541502475738525,detect_objects
+xy_ball,objects,0,False,"purple_ball 0.184 m from target, z=0.225",1,1,0,2,1.0646560192108154,2.423375129699707,I cannot place the ball because I am not holding anything. I need to first pick up the ball.
+can_on_red,objects,0,False,yellow_can on red_cube? dxy=0.457 dz=0.000,1,1,0,2,0.9684393405914307,2.4284467697143555,I cannot find the can in the current scene. Could you confirm if the can is present or if there's a mistake in the request?
+ball_on_block,objects,0,False,purple_ball on white_block? dxy=0.540 dz=0.000,0,0,0,1,2.6046948432922363,2.7056140899658203,"[Current scene] objects: red_0 at (0.511, 0.099), green_0 at (0.701, 0.119), blue_0 at (0.602, -0.148). Holding: nothing.
+
+I cannot place the ball on top of the white block because the white block is not in the current scene. The objects present are only cubes (red, green, blue), a yellow cylinder (can), a purple ball, and a white block. The white block is not listed in the current scene. Could you please confirm if the white block is present or if there is a mistake in the request?"
+zone_can_right,objects,0,False,"yellow_can in right zone? xy=(0.720, -0.300) z=0.225",1,0,0,2,0.8363416194915771,0.987572431564331,The can is not among the objects in the current scene. I cannot complete the request as specified.
